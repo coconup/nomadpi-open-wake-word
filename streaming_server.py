@@ -89,4 +89,4 @@ if __name__ == '__main__':
         owwModel = Model(inference_framework=args.inference_framework)
 
     # Start webapp
-    web.run_app(app, host='localhost', port=9002)
+    web.run_app(app, host='0.0.0.0', port=9002)
