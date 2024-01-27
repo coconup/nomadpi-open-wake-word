@@ -53,12 +53,8 @@ async def websocket_handler(request):
 
     return ws
 
-# Define static file handler
-async def static_file_handler(request):
-    return web.FileResponse('./streaming_client.html')
-
 app = web.Application()
-app.add_routes([web.get('/ws', websocket_handler), web.get('/', static_file_handler)])
+app.add_routes([web.get('/ws', websocket_handler)])
 
 if __name__ == '__main__':
     # Parse CLI arguments
